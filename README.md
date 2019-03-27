@@ -18,6 +18,7 @@ Telepresence Example 0.0.1
 
 ```
 $ telepresence --swap-deployment telepresence-example-deployment --run go run main.go
+$ curl telepresence-example-svc-EXTERNAL-IP:3000
 Telepresence Example local
 ```
 
@@ -25,6 +26,7 @@ Telepresence Example local
 
 ```
 $ telepresence --swap-deployment telepresence-example-deployment --docker-run shiro16/telepresence-examples:0.0.2
+$ curl telepresence-example-svc-EXTERNAL-IP:3000
 Telepresence Example 0.0.2
 ```
 
