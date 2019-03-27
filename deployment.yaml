@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telepresence-example-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telepresence-example-app
+  template:
+    metadata:
+      labels:
+        app: telepresence-example-app
+    spec:
+      containers:
+      - name: telepresence-example-app
+        image: shiro16/telepresence-examples:0.0.1
+        ports:
+        - containerPort: 3000
